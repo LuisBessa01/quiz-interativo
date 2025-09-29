@@ -1,0 +1,5 @@
+.relatorio_container{
+    display: flex;
+    width: 600px;
+    gap: 30px;
+}

@@ -12,18 +12,15 @@ function App() {
   })
   const [questaoAtual, setQuestaoAtual] = useState(0)
 
-  function handleOptionClick() {
-    setQuestaoAtual(questaoAtual + 1)
 
+  function handleOptionClick(value) {
+    setQuestaoAtual(questaoAtual + 1)
   }
 
 
   return (
     <>
-
-
-      {console.log(questaoAtual)}
-      {questaoAtual < 10 ?
+      {questaoAtual < questions.length ?
         <>
           <Header questaoAtual={questaoAtual + 1} />
           <QuestionCard questao={questions[questaoAtual]} onClick={handleOptionClick} />
